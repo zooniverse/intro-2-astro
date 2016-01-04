@@ -1,7 +1,7 @@
-/*color-palette: #FF1F59  #9AF7D5  #9AF7D5  #A50014  #28346C*/
+/*color-palette: #FF1F59  #FE8D26  #FE8D26  #A50014  #28346C*/
 
 a {
-    color: #9AF7D5;
+    color: #FE8D26;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -10,21 +10,21 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #9AF7D5;
+    color: #FE8D26;
 }
 
 .btn-default {
-    border: 1px solid #9AF7D5;
-    color: #9AF7D5;
+    border: 1px solid #FE8D26;
+    color: #FE8D26;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #9AF7D5;
+    border: 1px solid #FE8D26;
     outline: 0;
     color: #000;
-    background-color: #9AF7D5;
+    background-color: #FE8D26;
 }
 
 .intro {
