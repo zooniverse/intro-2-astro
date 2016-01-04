@@ -1,35 +1,3 @@
-html {
-  font-family: "Open Sans", Arial, sans-serif;
-  background: #fff;
-  color: #404040;
-}
-
-body {
-  background-image: url('../images/6.jpg');
-}
-
-header {
-  margin: 0 10vw;
-  padding-top: 10vw;
-  padding-bottom: 10vw;
-  text-align: center;
-  color: white;
-}
-
-main {
-  margin: 0 10vw;
-  color: white;
-  text-align: justify;
-}
-
-ul {
-  list-style: none;
-}
-
-.activity {
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-}
 
 /* CSS from Panoptes-Front-End */
 
@@ -40,6 +8,7 @@ ul {
 }
 
 .main-footer {
+  font-family: "Open Sans", Arial, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,53 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+
     <meta charset="utf-8">
-    <title>Intro 2 Astro</title>
-    <link type="text/css" rel="stylesheet" href="public/styles/normalize.css">
-    <link type="text/css" rel="stylesheet" href="public/styles/skeleton.css">
-    <link type="text/css" rel="stylesheet" href="public/styles/main.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <header>
-      <h1>Welcome to the Astro 101 tools!</h1>
-      <h5>These tools have been developed to work with Introduction to Astronomy courses.</h5>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Intro-2-Astro">
+    <meta name="author" content="">
+
+    <title>Intro-2-Astro</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="public/css/grayscale.css" rel="stylesheet">
+    <link href="public/css/custom.css" rel="stylesheet" type="text/css">
+    <link href="public/css/footer.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <!-- <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
+                </a>
+            </div> -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav"> -->
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <!-- <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Download</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- /.navbar-collapse -->
+        <!-- </div> -->
+        <!-- /.container -->
+    <!-- </nav> -->
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Welcome to the Astro 101 tools!</h1>
+                        <p class="intro-text">These tools have been developed to work with Introduction to Astronomy courses.</p>
+                        <a href="#activity1" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-    <main>
-      <div class="activity">
-        <h3>Activity 1: Introduction to the data analysis platform</h3>
-        <p>This activity uses data provided by students on their hometowns to introduce key concepts related to the nature of data and its visualization.  It also serves to demonstrate key features of the data analysis platform we are building.  Students will be exposed to data in its raw form, and will encounter how one piece of data can be used to produce another (in this case a distance from the classroom).  They will also see several ways that data can be presented visually, and discuss the implications for understanding on presenting the same data in multiple ways. This activity can serve as an ice-breaker for students, and can immediately lead into a discussion of distances and size scales in astronomy.</p>
-        <ul>
-          <li><a href="">Google Form</a></li>
-          <li><a href="">Google Sheet</a></li>
-        </ul>
-      </div>
-      <div class="activity">
-        <h3>Activity 2: Introduction to People Powered Research</h3>
-        <p>This activity introduces the technique of using crowdsourcing to produce useful data to advance scientific inquiry, also know as citizen science. Students will explore the uncertainty in using citizen science projects, through Galaxy Zoo classifications, and how we address it. They will also look into how scientists address uncertainty in publications and numerically in calculating parameters with their measured data.</p>
-        <ul>
-          <li><a href="">Project Page</a></li>
-        </ul>
-      </div>
-      <div class="activity">
-        <h3>Activity 3: HR Diagram</h3>
-        <p>Students will explore how to develop the HR diagram from cluster data using the relationships between luminosity to V magnitude and temperature to B-V. They will then use the HR diagrams they develop to understand the evolution of a star cluster.</p>
-        <ul>
-          <li><a href="">Homework Google Sheet</a></li>
-          <li><a href="">In-Class Google Sheet</a></li>
-        </ul>
-      </div>
-      <div class="activity">
-        <h3>Activity 4: Hubble’s Law</h3>
-        <p>This activity will introduce students to the concept of determining a galaxy’s velocity using its spectrum, and highlight how a galaxy’s velocity is inherently tied to how far away it is (i.e. Hubble’s Law). Students will identify key spectral lines in a galaxy’s spectrum and use their wavelengths to calculate the recessional velocity of the galaxy. This data will be aggregated and displayed to demonstrate Hubble’s Law, and a value for Hubble’s constant will be determined from the class’s data. This will familiarize them with dealing with spectra in addition to images, and highlight how physical information is derived from a spectrum and used in addition to information from imaging. This activity could be used to begin discussion on cosmology and the Big Bang.</p>
-        <ul>
-          <li><a href="">Project Page</a></li>
-          <li><a href="">Google Form</a></li>
-          <li><a href="">Google Sheet</a></li>
-        </ul>
-      </div>
-    </main>
+
+    <!-- About Section -->
+    <section id="activity1" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Activity 1: Introduction to the data analysis platform</h2>
+                <p>This activity uses data provided by students on their hometowns to introduce key concepts related to the nature of data and its visualization.  It also serves to demonstrate key features of the data analysis platform we are building.  Students will be exposed to data in its raw form, and will encounter how one piece of data can be used to produce another (in this case a distance from the classroom).  They will also see several ways that data can be presented visually, and discuss the implications for understanding on presenting the same data in multiple ways. This activity can serve as an ice-breaker for students, and can immediately lead into a discussion of distances and size scales in astronomy.</p>
+                <ul class="list-inline">
+                    <li>
+                        <a href="" class="btn btn-default btn-lg">Google Form</a>
+                    </li>
+                    <li>
+                        <a href="" class="btn btn-default btn-lg">Google Sheet</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="activity2" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Activity 2: Introduction to People Powered Research</h2>
+                    <p>This activity introduces the technique of using crowdsourcing to produce useful data to advance scientific inquiry, also know as citizen science. Students will explore the uncertainty in using citizen science projects, through Galaxy Zoo classifications, and how we address it. They will also look into how scientists address uncertainty in publications and numerically in calculating parameters with their measured data.</p>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="" class="btn btn-default btn-lg">Project Page</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="activity3" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Activity 3: HR Diagram</h2>
+                <p>Students will explore how to develop the HR diagram from cluster data using the relationships between luminosity to V magnitude and temperature to B-V. They will then use the HR diagrams they develop to understand the evolution of a star cluster.</p>
+                <ul class="list-inline">
+                  <li>
+                      <a href="" class="btn btn-default btn-lg">Homework Google Sheet</a>
+                  </li>
+                  <li>
+                      <a href="" class="btn btn-default btn-lg">In-Class Google Sheet</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="activity4" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Activity 4: Hubble’s Law</h2>
+                    <p>This activity will introduce students to the concept of determining a galaxy’s velocity using its spectrum, and highlight how a galaxy’s velocity is inherently tied to how far away it is (i.e. Hubble’s Law). Students will identify key spectral lines in a galaxy’s spectrum and use their wavelengths to calculate the recessional velocity of the galaxy. This data will be aggregated and displayed to demonstrate Hubble’s Law, and a value for Hubble’s constant will be determined from the class’s data. This will familiarize them with dealing with spectra in addition to images, and highlight how physical information is derived from a spectrum and used in addition to information from imaging. This activity could be used to begin discussion on cosmology and the Big Bang.</p>
+                    <ul class="list-inline">
+                      <li>
+                          <a href="" class="btn btn-default btn-lg">Project Page</a>
+                      </li>
+                      <li>
+                          <a href="" class="btn btn-default btn-lg">Google Form</a>
+                      </li>
+                      <li>
+                          <a href="" class="btn btn-default btn-lg">Google Sheet</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="main-footer">
       <div class="centered-grid main-footer-flex">
         <div class="main-logo">
@@ -97,5 +214,19 @@
         </div>
       </div>
     </footer>
-  </body>
+
+    <!-- jQuery -->
+    <script src="public/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="public/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="public/js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="public/js/grayscale.js"></script>
+
+</body>
+
 </html>
