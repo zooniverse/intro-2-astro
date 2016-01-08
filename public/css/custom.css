@@ -1,7 +1,7 @@
-/*color-palette: #FF1F59  #FE8D26  #FE8D26  #A50014  #28346C*/
+/*color-palette: magenta=#FF1F59  aqua=#9AF7D5  orange=#FE8D26 burgundy=#A50014  indigo=#28346C*/
 
 a {
-    color: #FE8D26;
+    color: #9AF7D5;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -10,21 +10,21 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #FE8D26;
+    color: #9AF7D5;
 }
 
 .btn-default {
-    border: 1px solid #FE8D26;
-    color: #FE8D26;
+    border: 1px solid #9AF7D5;
+    color: #9AF7D5;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #FE8D26;
+    border: 1px solid #9AF7D5;
     outline: 0;
     color: #000;
-    background-color: #FE8D26;
+    background-color: #9AF7D5;
 }
 
 .intro {
@@ -36,7 +36,11 @@ a:focus {
   -o-background-size: cover;
 }
 
-#activity1 {
+.intro-paragraph {
+  font-size: 16px;
+}
+
+#activity1 .download-section {
 
 }
 
@@ -49,7 +53,7 @@ a:focus {
   -o-background-size: cover;
 }
 
-#activity3 {
+#activity3 .download-section {
 
 }
 

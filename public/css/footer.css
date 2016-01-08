@@ -19,9 +19,13 @@
   overflow: auto;
 }
 
-.main-footer h1, h2, h3, h4, h5, h6 {
+.main-footer h6 {
   font-weight: 700;
   margin: 0;
+  text-transform: none;
+  font-family: inherit;
+  letter-spacing: normal;
+  line-height: 20px;
 }
 
 .main-footer a {
@@ -44,10 +48,17 @@
 
 .main-footer .main-logo {
   margin: 0 6.25vw 2.7em 0;
-  color: rgba(179,179,179,.5);
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 3px;
+  color: white;
+}
+
+.main-footer .main-logo-link {
+  color: rgba(255,255,255,0.25);
+  font-size: 18px;
+  margin-bottom: 2.7em;
+}
+
+.main-footer .main-logo-link:hover {
+  color: white;
 }
 
 .main-footer .site-map {
