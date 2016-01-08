@@ -40,11 +40,11 @@ a:focus {
   font-size: 16px;
 }
 
-#activity1 .download-section {
+#activity1 {
 
 }
 
-#activity2 .download-section {
+#activity2 {
   background: url(../img/4127624779_652971dab1_b.jpg) no-repeat center center scroll;
   background-color: #000;
   -webkit-background-size: cover;
@@ -53,11 +53,11 @@ a:focus {
   -o-background-size: cover;
 }
 
-#activity3 .download-section {
+#activity3 {
 
 }
 
-#activity4 .download-section {
+#activity4 {
   background: url(../img/2941504268_6239c47433_b.jpg) no-repeat center center scroll;
   background-color: #000;
   -webkit-background-size: cover;
