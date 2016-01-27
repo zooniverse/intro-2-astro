@@ -35,16 +35,11 @@ a:focus {
   background-size: cover;
   -o-background-size: cover;
 }
-
 .intro-paragraph {
   font-size: 16px;
 }
 
-#activity1 {
-
-}
-
-#activity2 {
+.home-page #activity2 {
   background: url(../img/4127624779_652971dab1_b.jpg) no-repeat center center scroll;
   background-color: #000;
   -webkit-background-size: cover;
@@ -53,11 +48,7 @@ a:focus {
   -o-background-size: cover;
 }
 
-#activity3 {
-
-}
-
-#activity4 {
+.home-page #activity4 {
   background: url(../img/2941504268_6239c47433_b.jpg) no-repeat center center scroll;
   background-color: #000;
   -webkit-background-size: cover;
@@ -65,3 +56,57 @@ a:focus {
   background-size: cover;
   -o-background-size: cover;
 }
+
+.resources-page .intro {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-height: 40em;
+}
+
+.resources-page .intro-body {
+  display: block;
+  vertical-align: initial;
+}
+
+.padding-top-bottom-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.resources-page .section-bottom {
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  padding-bottom: 100px;
+}
+
+.resources-page .section-top {
+  padding-top: 100px;
+}
+
+.resources-page .section p:last-of-type {
+  margin-bottom: 0;
+}
+
+.resources-page .footnote {
+  font-size: 1em;
+}
+
+.resources-page .table caption {
+  color: white;
+  font-size: 1.25em;
+}
+
+.resources-page .table td {
+  width: 50%;
+}
+
+.side-nav .li {
+  padding-bottom: 0.75em;
+}
+
+.sub-list {
+  list-style: none;
+  padding-left: 1.5em;
+}
+
+
