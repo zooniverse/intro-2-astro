@@ -13,6 +13,10 @@ a:focus {
     color: #9AF7D5;
 }
 
+.dropdown-toggle {
+  cursor: pointer;
+}
+
 .btn-default {
     border: 1px solid #9AF7D5;
     color: #9AF7D5;
@@ -39,6 +43,10 @@ a:focus {
   font-size: 16px;
 }
 
+.footnote {
+  font-size: 1em;
+}
+
 .home-page #activity2 {
   background: url(../img/4127624779_652971dab1_b.jpg) no-repeat center center scroll;
   background-color: #000;
@@ -61,7 +69,7 @@ a:focus {
   align-items: center;
   display: flex;
   justify-content: center;
-  max-height: 40em;
+  max-height: 35em;
 }
 
 .resources-page .intro-body {
@@ -85,10 +93,6 @@ a:focus {
 
 .resources-page .section p:last-of-type {
   margin-bottom: 0;
-}
-
-.resources-page .footnote {
-  font-size: 1em;
 }
 
 .resources-page .table caption {
