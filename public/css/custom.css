@@ -56,6 +56,12 @@ a:focus {
   -o-background-size: cover;
 }
 
+.home-page #activity2 p {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1em;
+  border-radius: 6px;
+}
+
 .home-page #activity4 {
   background: url(../img/2941504268_6239c47433_b.jpg) no-repeat center center scroll;
   background-color: #000;
@@ -112,5 +118,3 @@ a:focus {
   list-style: none;
   padding-left: 1.5em;
 }
-
-
