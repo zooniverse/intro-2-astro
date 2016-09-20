@@ -1,16 +1,20 @@
 /*color-palette: magenta=#FF1F59  aqua=#9AF7D5  orange=#FE8D26 burgundy=#A50014  indigo=#28346C*/
 
-a {
+.link {
     color: #9AF7D5;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 
-a:hover,
-a:focus {
+.link:hover,
+.link:focus {
     text-decoration: none;
     color: #9AF7D5;
+}
+
+.navbar-nav li a {
+  font-size: 0.9em;
 }
 
 .dropdown-toggle {
@@ -71,7 +75,7 @@ a:focus {
   border-radius: 6px;
 }
 
-.home-page #activity3 {
+.home-page #galaxy {
   background: url(../img/2941504268_6239c47433_b.jpg) no-repeat center center scroll;
   background-color: #000;
   -webkit-background-size: cover;
@@ -136,4 +140,8 @@ a:focus {
 
 .list li {
   margin: 10px 0;
+}
+
+.no-padding {
+  padding: 0;
 }
