@@ -47,8 +47,17 @@ a:focus {
   font-size: 1em;
 }
 
-.home-page #activity2 {
+.home-page #follow-up {
   background: url(../img/4127624779_652971dab1_b.jpg) no-repeat center center scroll;
+  background-color: #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.home-page #research-project {
+  background: url(../img/19030898356_2a8759f882_k.jpg) no-repeat center center scroll;
   background-color: #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -62,7 +71,7 @@ a:focus {
   border-radius: 6px;
 }
 
-.home-page #activity4 {
+.home-page #activity3 {
   background: url(../img/2941504268_6239c47433_b.jpg) no-repeat center center scroll;
   background-color: #000;
   -webkit-background-size: cover;
