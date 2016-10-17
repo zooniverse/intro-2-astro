@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router';
 import logo from '../logo.svg';
 
 class Home extends Component {
@@ -13,6 +14,7 @@ class Home extends Component {
           To get started, edit <code>src/Home.js</code> and save to reload.
         </p>
         <p>put your code here</p>
+        <Link to="new">to the new page</Link>
       </div>
     )
   }
