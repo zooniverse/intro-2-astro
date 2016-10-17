@@ -5,7 +5,9 @@ import { Router, Route, Link, browserHistory, IndexRedirect } from 'react-router
 
 import './index.css';
 import BasicApp from './app';
-import Home from './home';
+
+import Home from './pages/home';
+import NewPage from './pages/newpage';
 
 class App extends Component {
   render() {
@@ -14,6 +16,7 @@ class App extends Component {
         <Route name='app' path='/' component={BasicApp}>
           <IndexRedirect to='home'/>
           <Route path='/home' component={Home}/>
+          <Route path='/new' component={NewPage} />
         </Route>
       </Router>
     )
