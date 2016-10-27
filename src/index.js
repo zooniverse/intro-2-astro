@@ -1,22 +1,22 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-router';
 
-import { Router, Route, Link, browserHistory, IndexRedirect } from 'react-router';
-
-import './index.css';
-import BasicApp from './app';
+import Layout from './components/layout';
 
 import Home from './pages/home';
-import NewPage from './pages/newpage';
+import Student from './pages/student';
+import Educator from './pages/educator';
 
 class App extends Component {
   render() {
     return (
       <Router history={browserHistory}>
-        <Route name='app' path='/' component={BasicApp}>
-          <IndexRedirect to='home'/>
-          <Route path='/home' component={Home}/>
-          <Route path='/new' component={NewPage} />
+        <Route path='/' component={Layout}>
+          <IndexRoute component={Home}/>
+          <Route path='/student' component={Student}/>
+          <Route path='/educator' component={Educator}/>
+          <Redirect from='/*' to='/'/>
         </Route>
       </Router>
     )

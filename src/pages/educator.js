@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 
-class NewPage extends Component {
+class Educator extends Component {
   render(){
     return (
       <div>
-        New Page
+        <h1>Educator page...</h1>
       </div>
     )
   }
 }
 
-export default NewPage;
+export default Educator;
