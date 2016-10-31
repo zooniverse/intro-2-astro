@@ -5,10 +5,10 @@ class Home extends Component {
   render(){
     return (
       <div>
-        <h1>Click one...</h1>
-        <Link to="student">Student</Link>
-        <br />
-        <Link to="educator">Educator</Link>
+        <h1>Welcome to Intro 2 Astro!</h1>
+        <h2>Please choose one...</h2>
+        <button><Link to='student'>Student</Link></button>
+        <button><Link to='educator'>Educator</Link></button>
       </div>
     )
   }

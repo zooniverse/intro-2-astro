@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "create-react-app-stylus": "^1.1.1",
     "react-scripts": "0.6.1"
   },
   "dependencies": {
@@ -13,8 +14,8 @@
     "react-router": "^2.8.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts-with-stylus start src/styles/main.styl",
+  "build": "react-scripts-with-stylus build src/styles/main.styl",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

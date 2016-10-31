@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import Nav from './nav';
+import NavbarInstance from './nav';
 import Footer from './footer';
 
 class Layout extends Component {
   render() {
     return (
       <div>
-        <Nav/>
+        <NavbarInstance/>
         <div>
           {this.props.children}
         </div>
