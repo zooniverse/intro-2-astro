@@ -6,7 +6,7 @@ import Footer from './footer';
 class Layout extends Component {
   render() {
     return (
-      <div>
+      <div className='layout'>
         <NavbarInstance/>
         <div>
           {this.props.children}

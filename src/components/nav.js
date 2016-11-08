@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { Nav, NavItem, Navbar } from 'react-bootstrap';
 
+import NavAuth from './nav-auth';
+
 class NavbarInstance extends Component {
   render() {
     return (
-      <Navbar>
+      <Navbar className='nav'>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to='/'>Intro 2 Astro</Link>
@@ -22,7 +24,9 @@ class NavbarInstance extends Component {
             </NavItem>
           </Nav>
           <Nav pullRight>
-            <NavItem eventKey={1}>Sign-In</NavItem>
+            <NavItem eventKey={1}>
+              <NavAuth/>
+            </NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
