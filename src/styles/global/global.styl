@@ -1,16 +1,56 @@
-@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700')
+// Colors
+
+// General
 
 body
-  background-color: black
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  // background-color: black
   display: block
   margin: 0
-  font-size: 14px
   width: 100%
   height: 100%
 
-h1, h2, p
-  color: white
+// Typography
+
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700')
+
+h1,h2,h3,h4,h5,h6
+  margin: 0 0 35px
+  text-transform: uppercase
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif
+  font-weight: 700
+  letter-spacing: 1px
+  // color: white
+
+p
+  margin: 0 0 25px
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif
+  font-size: 18px
+  line-height: 1.5
+  // color: white
+
+  @media(min-width:768px)
+    p
+      margin: 0 0 35px
+      font-size: 20px
+      line-height: 1.6
+
+// Anchors
+
+a
+  // color: #42dca3;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+
+  a:hover,:focus
+    text-decoration: none;
+    // color: #1d9b6c;
+
+// Buttons
+
+// Lists
+
+// *** EVERYTHING BELOW NEEDS TO BE MOVED ***
 
 .intro
   display: table
@@ -18,13 +58,14 @@ h1, h2, p
   height: 70vh
   padding: 0
   text-align: center
-  color: white
+  // color: white
   background:
     url(../img/2941504858_92423577d0_b.jpg),no-repeat,bottom,center,scroll
   background-size: cover
 
   h1, h2
     text-transform: uppercase
+    font-size: 40px
 
 .intro-body
   display: table-cell

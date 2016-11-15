@@ -7,7 +7,7 @@ import NavAuth from './nav-auth';
 class NavbarInstance extends Component {
   render() {
     return (
-      <Navbar className='nav'>
+      <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to='/'>Intro 2 Astro</Link>
@@ -17,9 +17,12 @@ class NavbarInstance extends Component {
         <Navbar.Collapse>
           <Nav>
             <NavItem eventKey={1}>
-              <Link to='/assignments'>Assignments</Link>
+              <Link to='/classrooms'>Classrooms</Link>
             </NavItem>
             <NavItem eventKey={2}>
+              <Link to='/assignments'>Assignments</Link>
+            </NavItem>
+            <NavItem eventKey={3}>
               <Link to='/resources'>Resources</Link>
             </NavItem>
           </Nav>

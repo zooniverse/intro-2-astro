@@ -4,16 +4,15 @@ import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-route
 import oauth from 'panoptes-client/lib/oauth';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
 import './styles/app.css';
 
 import { config } from './constants/config'
 import Layout from './components/layout';
 import Home from './pages/home';
-import Assignments from './pages/assignments';
+import AssignmentsWrapper from './pages/assignments';
 import Resources from './pages/resources';
 import Student from './pages/student';
-import Educator from './pages/educator';
+import Classrooms from './pages/classrooms';
 
 oauth.init(config.panoptesAppId)
   .then(() => {
@@ -21,10 +20,10 @@ oauth.init(config.panoptesAppId)
       <Router history={browserHistory}>
         <Route path='/' component={Layout}>
           <IndexRoute component={Home}/>
-          <Route path='/assignments' component={Assignments}/>
+          <Route path='/assignments' component={AssignmentsWrapper}/>
           <Route path='/resources' component={Resources}/>
           <Route path='/student' component={Student}/>
-          <Route path='/educator' component={Educator}/>
+          <Route path='/classrooms' component={Classrooms}/>
           <Redirect from='/*' to='/'/>
         </Route>
       </Router>,

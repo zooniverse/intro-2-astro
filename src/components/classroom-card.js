@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class AssignmentCard extends Component {
+class ClassroomCard extends Component {
   render(){
     return (
       <div>
@@ -18,10 +18,10 @@ class AssignmentCard extends Component {
 
 const { string, array } = React.PropTypes
 
-AssignmentCard.propTypes = {
+ClassroomCard.propTypes = {
   title: string.isRequired,
   description: string.isRequired,
   links: array,
 }
 
-export default AssignmentCard;
+export default ClassroomCard;
