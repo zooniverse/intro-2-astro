@@ -12,7 +12,7 @@ import Home from './pages/home';
 import AssignmentsWrapper from './pages/assignments';
 import Resources from './pages/resources';
 import Student from './pages/student';
-import Classrooms from './pages/classrooms';
+import ClassroomsWrapper from './pages/classrooms';
 
 oauth.init(config.panoptesAppId)
   .then(() => {
@@ -23,7 +23,7 @@ oauth.init(config.panoptesAppId)
           <Route path='/assignments' component={AssignmentsWrapper}/>
           <Route path='/resources' component={Resources}/>
           <Route path='/student' component={Student}/>
-          <Route path='/classrooms' component={Classrooms}/>
+          <Route path='/classrooms' component={ClassroomsWrapper}/>
           <Redirect from='/*' to='/'/>
         </Route>
       </Router>,

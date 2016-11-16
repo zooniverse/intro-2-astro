@@ -16,12 +16,13 @@ class AssignmentCard extends Component {
   }
 }
 
-const { string, array } = React.PropTypes
+const { string, arrayOf, object } = React.PropTypes
 
 AssignmentCard.propTypes = {
+  id: string.isRequired,
   title: string.isRequired,
   description: string.isRequired,
-  links: array,
+  links: arrayOf(object),
 }
 
 export default AssignmentCard;

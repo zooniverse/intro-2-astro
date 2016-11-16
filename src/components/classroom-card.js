@@ -1,27 +1,30 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router';
+import { Badge, Button } from 'react-bootstrap';
 
 class ClassroomCard extends Component {
   render(){
     return (
       <div>
-        <h2>{this.props.title}</h2>
-        <p>{this.props.description}</p>
-        {this.props.links.map((link, index) => {
+        <h2>{`Classroom #${this.props.id}`}</h2>
+        {this.props.students.map((studentID) => {
           return (
-            <button key={index}><a href={link.url}>{link.text}</a></button>
+            <Badge key={studentID}>{studentID}</Badge>
           )
         })}
+        <Button><Link to='/assignments'>Assignments</Link></Button>
       </div>
     )
   }
 }
 
-const { string, array } = React.PropTypes
+const { string, arrayOf } = React.PropTypes
 
 ClassroomCard.propTypes = {
-  title: string.isRequired,
-  description: string.isRequired,
-  links: array,
+  id: string.isRequired,
+  teachers: arrayOf(string),
+  students: arrayOf(string),
+  assignments: arrayOf(string),
 }
 
 export default ClassroomCard;
