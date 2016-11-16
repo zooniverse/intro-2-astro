@@ -7,7 +7,7 @@ import NavAuth from './nav-auth';
 class NavbarInstance extends Component {
   render() {
     return (
-      <Navbar>
+      <Navbar className='navbar'>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to='/'>Intro 2 Astro</Link>

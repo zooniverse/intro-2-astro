@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import auth from 'panoptes-client/lib/auth';
 import oauth from 'panoptes-client/lib/oauth';
+import { Button } from 'react-bootstrap';
 
 import { config } from '../constants/config';
 
@@ -39,11 +40,11 @@ class NavAuth extends Component {
       button = (
         <div>
           <span>{this.state.user.display_name}{' '}</span>
-          <button type='submit' onClick={this.logout}>Logout</button>
+          <Button type='submit' onClick={this.logout}>Logout</Button>
         </div>
       )
     } else {
-      button = <button type='submit' onClick={this.login}>Login</button>
+      button = <Button type='submit' onClick={this.login}>Login</Button>
     }
     return (
       <div>

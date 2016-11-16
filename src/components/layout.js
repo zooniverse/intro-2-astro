@@ -6,11 +6,11 @@ import Footer from './footer';
 class Layout extends Component {
   render() {
     return (
-      <div>
+      <div className='layout'>
         <NavbarInstance/>
-        <div>
+        <main className='main'>
           {this.props.children}
-        </div>
+        </main>
         <Footer/>
       </div>
     );
