@@ -1,10 +1,10 @@
 import { createStore, applyMiddleware } from 'redux';
-import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
+import { CreateJumpstateMiddleware } from 'jumpstate';
 import rootReducer from '../ducks/reducer';
 
 const createStoreWithMiddleware = applyMiddleware(
-  thunkMiddleware,
+  CreateJumpstateMiddleware(),
   createLogger(),
 )(createStore);
 
@@ -15,15 +15,15 @@ export default function configureStore(initialState) {
   );
   /* eslint-enable */
 
-  if (module.hot) {
-    // Enable Webpack hot module replacement for reducers
-    module.hot.accept('../ducks/reducer', () => {
-      // don't bother loading this module if we're not in hot mode
-      const nextRootReducer = require('../ducks/reducer'); // eslint-disable-line global-require
+  // if (module.hot) {
+  //   // Enable Webpack hot module replacement for reducers
+  //   module.hot.accept('../ducks/reducer', () => {
+  //     // don't bother loading this module if we're not in hot mode
+  //     const nextRootReducer = require('../ducks/reducer'); // eslint-disable-line global-require
 
-      store.replaceReducer(nextRootReducer);
-    });
-  }
+  //     store.replaceReducer(nextRootReducer);
+  //   });
+  // }
 
   return store;
 }

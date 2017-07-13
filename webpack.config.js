@@ -8,8 +8,8 @@ module.exports = {
 
   entry: [
     'eventsource-polyfill', // necessary for hot reloading with IE
-    'react-hot-loader/patch',
-    'webpack-hot-middleware/client?reload=true',
+    // 'react-hot-loader/patch',
+    // 'webpack-hot-middleware/client?reload=true',
     path.join(__dirname, 'src/index.jsx')
   ],
 
@@ -26,7 +26,7 @@ module.exports = {
       filename: 'index.html',
       gtm: ''
     }),
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('staging')

@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { checkLoginUser, loginToPanoptes, logoutFromPanoptes } from '../ducks/login';
+import { Actions } from 'jumpstate';
 
 import LoginButton from '../components/LoginButton';
 import LogoutButton from '../components/LogoutButton';
@@ -15,16 +15,16 @@ class AuthContainer extends React.Component {
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
     if (!props.initialised) {
-      props.dispatch(checkLoginUser());
+      Actions.checkLoginUser();
     }
   }
 
   login() {
-    return this.props.dispatch(loginToPanoptes());
+    return Actions.loginToPanoptes();
   }
 
   logout() {
-    this.props.dispatch(logoutFromPanoptes());
+    Actions.logoutFromPanoptes();
   }
 
   render() {
@@ -37,7 +37,6 @@ class AuthContainer extends React.Component {
 AuthContainer.propTypes = {
   user: PropTypes.shape({ login: PropTypes.string }),
   initialised: PropTypes.bool,
-  dispatch: PropTypes.func,
 };
 
 AuthContainer.defaultProps = {
