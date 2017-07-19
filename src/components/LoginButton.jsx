@@ -1,14 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from 'grommet/components/Button';
 
-const LoginButton = ({ login }) => {
+const LoginButton = ({ label, login }) => {
   return (
-    <button type="submit" onClick={login}>Login</button>
+    <Button type="button" className="site-header__button--as-link" onClick={login} label={label} plain={true} />
   );
 };
 
+LoginButton.defaultProps = {
+  label: 'Sign in',
+  login: () => {}
+};
+
 LoginButton.propTypes = {
-  login: PropTypes.func.isRequired,
+  label: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  login: PropTypes.func.isRequired
 };
 
 export default LoginButton;

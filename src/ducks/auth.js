@@ -9,57 +9,66 @@ const computeRedirectURL = (window) => {
 };
 
 // Synchronous Actions
+const toggleRegistrationForm = (state) => {
+  return { ...state, openRegistrationForm: !state.openRegistrationForm };
+};
+
 const setLoginUser = (state, user) => {
-  return { fetching: false, initialised: true, user };
+  return { ...state, initialised: true, user };
 };
 
 const fetchingUser = (state, fetching) => {
-  return { fetching };
+  return { ...state, fetching };
 };
 
 const setError = (state, error) => {
-  return { error };
+  return { ...state, error };
 };
 
 // Effects are for async actions and get automatically to the global Actions list
 Effect('checkLoginUser', () => {
-  Actions.user.fetchingUser(true);
+  Actions.auth.fetchingUser(true);
   oauth.checkCurrent()
     .then((user) => {
-      Actions.user.setLoginUser(user);
-      Actions.user.fetchingUser(false);
+      Actions.auth.setLoginUser(user);
+      Actions.auth.fetchingUser(false);
     }).catch((error) => {
-      Actions.user.fetchingUser(false);
-      Actions.user.setError(error);
+      Actions.auth.fetchingUser(false);
+      Actions.auth.setError(error);
     });
 });
 
 Effect('loginToPanoptes', () => {
   // Returns a login page URL for the user to navigate to.
-  return (() => oauth.signIn(computeRedirectURL(window)));
-});
-
-Effect('logoutFromPanoptes', () => {
-  Actions.user.fetchingUser(true);
-  oauth.signOut()
+  oauth.signIn(computeRedirectURL(window))
     .then((user) => {
-      Actions.user.setLoginUser(user);
-      Actions.user.fetchingUser(false);
+      console.log('user', user);
     });
 });
 
-const login = State('user', {
+Effect('logoutFromPanoptes', () => {
+  Actions.auth.fetchingUser(true);
+  oauth.signOut()
+    .then((user) => {
+      Actions.auth.setLoginUser(user);
+      Actions.auth.fetchingUser(false);
+    });
+});
+
+const auth = State('auth', {
   // Initial State
   initial: {
     error: null,
     fetching: false,
     initialised: false,
+    openRegistrationForm: false,
     user: null
   },
   // Actions
   fetchingUser,
   setLoginUser,
-  setError
+  setError,
+  toggleRegistrationForm
 });
 
-export default login;
+export default auth;

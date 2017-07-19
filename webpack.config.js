@@ -34,14 +34,14 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['.js', '.jsx', '.styl'],
+    extensions: ['.js', '.jsx', '.json', '.css', '.styl'],
     modules: ['.', 'node_modules']
   },
 
   module: {
     rules: [{
       test: /\.jsx?$/,
-      exclude: /(node_modules)/,
+      exclude: path.resolve(__dirname, 'node_modules'),
       use: [
         'babel-loader'
         // 'eslint-loader' uncomment if you want to use eslint while compiling
@@ -59,6 +59,14 @@ module.exports = {
         loader: 'stylus-loader',
         options: {
           use: [nib()]
+        }
+      }]
+    }, {
+      test: /\.css$/,
+      use: ['style-loader', {
+        loader: 'css-loader',
+        options: {
+          includePaths: [path.resolve(__dirname, 'node_modules/zoo-grommet/dist')]
         }
       }]
     }]

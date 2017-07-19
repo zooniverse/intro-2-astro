@@ -8,19 +8,24 @@ import { Actions } from 'jumpstate';
 
 import LoginButton from '../components/LoginButton';
 import LogoutButton from '../components/LogoutButton';
+import RegisterButton from '../components/RegisterButton';
+import RegistrationFormContainer from './RegistrationFormContainer';
 
 class AuthContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.login = this.login.bind(this);
-    this.logout = this.logout.bind(this);
+
     if (!props.initialised) {
       Actions.checkLoginUser();
     }
   }
 
+  toggleRegistrationForm() {
+    Actions.auth.toggleRegistrationForm();
+  }
+
   login() {
-    return Actions.loginToPanoptes();
+    Actions.loginToPanoptes();
   }
 
   logout() {
@@ -30,23 +35,30 @@ class AuthContainer extends React.Component {
   render() {
     return (this.props.user)
       ? <LogoutButton user={this.props.user} logout={this.logout} />
-      : <LoginButton login={this.login} />;
+      : <div>
+          <LoginButton login={this.login} />
+          <RegisterButton toggleForm={this.toggleRegistrationForm} />
+          {this.props.openRegistrationForm && <RegistrationFormContainer />}
+        </div>;
   }
 }
 
 AuthContainer.propTypes = {
   user: PropTypes.shape({ login: PropTypes.string }),
   initialised: PropTypes.bool,
+  openRegistrationForm: PropTypes.bool
 };
 
 AuthContainer.defaultProps = {
   user: null,
   initialised: false,
+  openRegistrationForm: false
 };
 
 const mapStateToProps = (state) => ({
-  user: state.login.user,
-  initialised: state.login.initialised,
+  user: state.auth.user,
+  initialised: state.auth.initialised,
+  openRegistrationForm: state.auth.openRegistrationForm
 });
 
 export default connect(mapStateToProps)(AuthContainer);  // Connects the Component to the Redux Store
