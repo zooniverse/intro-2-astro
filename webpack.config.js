@@ -1,15 +1,30 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 const nib = require('nib');
 
 module.exports = {
   devtool: 'eval-source-map',
 
+  devServer: {
+    contentBase: path.join(__dirname, '/src/'),
+    // hot: true,
+    inline: true,
+    stats: {
+      colors: true,
+      hash: false,
+      timings: true,
+      chunks: false,
+      chunkModules: false,
+      modules: false
+    },
+    port: 3998 // Change this for your project
+  },
+
   entry: [
     'eventsource-polyfill', // necessary for hot reloading with IE
     // 'react-hot-loader/patch',
-    // 'webpack-hot-middleware/client?reload=true',
     path.join(__dirname, 'src/index.jsx')
   ],
 
@@ -20,6 +35,7 @@ module.exports = {
   },
 
   plugins: [
+
     new HtmlWebpackPlugin({
       template: 'src/index.tpl.html',
       inject: 'body',
@@ -30,7 +46,8 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('staging')
-    })
+    }),
+    new DashboardPlugin({ port: 3999 })
   ],
 
   resolve: {
@@ -48,7 +65,7 @@ module.exports = {
       ]
     }, {
       test: /\.(jpg|png|gif|otf|eot|svg|ttf|woff\d?)$/,
-      use: 'file-loader'
+      use: 'file-loader?name=[name].[ext]'
     }, {
       test: /\.styl$/,
       use: [{

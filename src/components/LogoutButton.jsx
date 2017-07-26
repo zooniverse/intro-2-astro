@@ -2,27 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'grommet/components/Button';
 
-const LogoutButton = ({ label, logout, user }) => {
+const LogoutButton = ({ className, label, logout }) => {
   return (
-    <div className="logout-button">
-      <span>{user.display_name}</span>
-      <Button type="button" className="site-header__button--as-link" onClick={logout} label={label} plain={true} />
-    </div>
+    <Button className={className} type="button" onClick={logout} label={label} plain={true} />
   );
 };
 
 LogoutButton.defaultProps = {
+  className: 'site-header__button--as-link',
   label: 'Logout',
-  logout: () => {},
-  user: {}
-}
+  logout: () => {}
+};
 
 LogoutButton.propTypes = {
+  className: PropTypes.string,
   label: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
-  logout: PropTypes.func.isRequired,
-  user: PropTypes.shape({
-    display_name: PropTypes.string,
-  }).isRequired,
+  logout: PropTypes.func.isRequired
 };
 
 export default LogoutButton;

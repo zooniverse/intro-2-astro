@@ -1,5 +1,5 @@
 const config = {
-  panoptesAppId: '24ad5676d5d25c6aa850dc5d5f63ec8c03dbc7ae113b6442b8571fce6c5b974c', // test-rog project for dev
+  panoptesAppId: '397e9bf4e29e75c0a092261ebe3338d3ef2687f2c5935d55c7ca0f63ecc2dd33', // test-rog project for dev
 };
 
 export default config;

@@ -1,15 +1,14 @@
-// A smart component that handles state for the LoginButton and LoggedInUser
-// components. Stores state in Redux.
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Actions } from 'jumpstate';
-
+import Anchor from 'grommet/components/Anchor';
+import { NavLink } from 'react-router-dom';
 import LoginButton from '../components/LoginButton';
 import LogoutButton from '../components/LogoutButton';
 import RegisterButton from '../components/RegisterButton';
 import RegistrationFormContainer from './RegistrationFormContainer';
+import UserMenu from '../components/UserMenu';
 
 class AuthContainer extends React.Component {
   constructor(props) {
@@ -33,8 +32,22 @@ class AuthContainer extends React.Component {
   }
 
   render() {
-    return (this.props.user)
-      ? <LogoutButton user={this.props.user} logout={this.logout} />
+    let userMenuNavItems;
+    if (this.props.user && this.props.initialised) {
+      const login = this.props.user.login;
+      userMenuNavItems = [
+        <Anchor href={`https://www.zooniverse.org/users/${login}`}>Profile</Anchor>,
+        <NavLink to="/">Home</NavLink>,
+        <Anchor href="https://www.zooniverse.org/settings">Settings</Anchor>,
+        <Anchor href={`https://www.zooniverse.org/collections/${login}`}>Collections</Anchor>,
+        <Anchor href={`https://www.zooniverse.org/favorites/${login}`}></Anchor>,
+        <LogoutButton className="site-header__button--as-link" logout={this.logout} />
+      ];
+    }
+
+
+    return (this.props.user && this.props.initialised)
+      ? <UserMenu user={this.props.user} userMenuNavItems={userMenuNavItems} />
       : <div>
           <LoginButton login={this.login} />
           <RegisterButton toggleForm={this.toggleRegistrationForm} />
