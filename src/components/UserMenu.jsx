@@ -10,7 +10,7 @@ const UserMenu = (props) => {
   };
 
   return (
-    <Menu label={props.user.display_name} icon={<DownIcon />}>
+    <Menu className="user-menu" label={props.user.display_name} icon={<DownIcon />} size="small">
       {props.userMenuNavItems.map((navItem, i) => {
         createKeyedAnchorItem(navItem, i);
       })}

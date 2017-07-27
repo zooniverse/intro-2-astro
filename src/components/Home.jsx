@@ -21,16 +21,23 @@ const Home = (props) => {
 
   return (
     <Article className="home" colorIndex="accent-3">
-      <Hero className="home__hero" background={backgroundImage} backgroundColorIndex="dark" size={signedIn ? "medium" : "large"}>
+      <Hero
+        className="home__hero"
+        background={backgroundImage}
+        backgroundColorIndex="dark"
+        size={signedIn ? 'medium' : 'large'}
+      >
         <ZooniverseLogotype className="hero__zooniverse-logotype" />
         <Box align="center" basis="2/3" justify="between">
           <Section align="center">
-            <Box align="center" direction={signedIn ? "row" : "column"} size="xxlarge">
+            <Box align="center" direction={signedIn ? 'row' : 'column'} size="xxlarge">
               <span className="hero__big-circle"><span className="hero__small-circle" /></span>
               <Heading align="center" tag="h1" className="home__header">Introduction to Astronomy</Heading>
             </Box>
-            <Box align={signedIn ? "start" : "center"} textAlign={signedIn ? "left" : "center"} size="xlarge">
-              <Paragraph className="home__description" margin="small">Short description of what this is, what the Zooniverse is, why a professor or institution would be interested in this material.</Paragraph>
+            <Box align={signedIn ? 'start' : 'center'} textAlign={signedIn ? 'left' : 'center'} size="xlarge">
+              <Paragraph className="home__description" margin="small">
+                Short description of what this is, what the Zooniverse is, why a professor or institution would be interested in this material.
+              </Paragraph>
             </Box>
           </Section>
           {!signedIn &&
@@ -40,7 +47,7 @@ const Home = (props) => {
             </Section>}
         </Box>
       </Hero>
-      {(props.user && props.initialised) &&
+      {signedIn &&
         <HomeSignedIn />}
       <Section className="home__section" align="center" colorIndex="accent-2">
         <Paragraph className="section__paragraph" align="center">
@@ -62,9 +69,11 @@ Home.defaultProps = {
   initialised: false
 };
 
-const mapStateToProps = (state) => ({
-  user: state.auth.user,
-  initialised: state.auth.initialised
-});
+function mapStateToProps(state) {
+  return {
+    user: state.auth.user,
+    initialised: state.auth.initialised
+  };
+}
 
 export default connect(mapStateToProps)(Home);
